@@ -1,0 +1,382 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #444;
+}
+
+body {
+    height: 100vh;
+}
+
+
+/**********************Cabeçalho****************/
+
+header {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 3%;
+    padding-right: 2%;
+}
+
+
+
+.box_logo {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    max-width: 92px;
+}
+
+.box_buscador {
+    max-width: 640px;
+    width: 100%;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #dfe1e5;
+    border-radius: 50px;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.132);
+}
+
+.box_buscador:hover {
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.132), 0px 0px 3px 1px rgba(0, 0, 0, 0.132);
+}
+
+.box_buscador form {
+    max-width: 437px;
+    width: 100%;
+}
+
+#buscador {
+    width: 100%;
+    flex-grow: 1;
+    border: none;
+    font-size: 16px;
+    color:#444;
+}
+
+#buscador:focus {
+    outline: none;
+}
+
+.icon_buscador,.icon_perfil {
+    width: 38px;
+    height: 38px;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon_buscador svg, .icon_perfil svg {
+    max-width: 24px;
+    max-height: 24px;
+}
+
+#x_icon {
+    border-right: 1px solid #ababab;
+}
+
+.box_perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+
+.icon_perfil {
+    border-radius: 50%;
+}
+
+.icon_perfil:hover {
+    background-color: #ababab44;
+}
+
+.profile_pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border: 3px solid transparent;
+}
+
+.profile_pic img {
+    height: 100%;
+}
+
+.header_bottom {
+    width: 100%;
+    border-bottom: 1px solid #ababab81;
+}
+
+.container {
+    margin-left: 15%;
+    max-width: 652px;
+    width: 100%;
+}
+
+.box_menu {
+    max-width: 620px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.menu {
+    width: 100%;
+}
+
+.menu_list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+
+.menu_item {
+    display: flex;
+    align-items: center;
+    padding: 8px 0px;
+}
+
+.menu_item_ativo {
+    border-bottom: 3px solid #4285f4;
+}
+
+.menu_item_ativo span {
+    color: #4285f4;
+}
+
+.menu_item:hover {
+    border-bottom: 3px solid #4285f4;
+}
+
+.menu_item:hover span {
+    color: #4285f4;
+}
+
+.item_icon {
+    max-width: 18px;
+    max-height: 18px;
+    margin-right: 5px;
+}
+
+.item_icon svg {
+    max-width: 18px;
+    max-height: 18px;
+}
+
+.box_menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #444;
+    display: block;
+    background-color: #f9f9f9ea;
+    white-space: nowrap;
+}
+
+.box_menu a:hover {
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.132);
+}
+
+
+/**********************Resultados****************/
+
+.resultados_totais {
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.resultados_totais span {
+    color: rgb(116, 116, 116);
+}
+
+.box_resultado {
+    margin-bottom: 35px;
+}
+
+.box_resultado a {
+    text-decoration: none;
+}
+
+.box_resultado a:hover .title_resultado {
+    text-decoration: underline;
+}
+
+.link_resultado {
+    display: flex;
+    align-items: center;
+}
+
+.link_resultado span{
+    color: rgb(22, 22, 22);
+}
+
+.icon_link {
+    display: flex;
+}
+
+.icon_link svg {
+    width: 20px;
+    height: 20px;
+}
+
+.title_resultado {
+    margin-top: 8px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #1a0dab;
+}
+
+.title_resultado, .subtitle_resultado {
+    white-space: wrap;
+}
+
+/**********************Relacionadas****************/
+.box_relacionadas a {
+    text-decoration: none;
+}
+
+.box_relacionadas a:hover {
+    text-decoration: underline;
+}
+
+#title_relacionadas {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.box_relacionadas {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    white-space: nowrap;
+}
+
+.box_relacionadas a {
+    flex-grow: 1;
+}
+
+.relacionada {
+    padding: 8px 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: rgb(228, 224, 224);
+    border-radius: 30px;
+}
+
+.icon_relacionada svg {
+    width: 25px;
+    height: 25px;
+}
+
+.relacionada span {
+    color: rgb(41, 41, 41);
+    font-weight: bold;
+}
+
+/**********************Footer****************/
+footer {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(244, 244, 244, 0.83);
+    font-size: 15px;
+    color: rgba(92, 92, 92, 0.785);
+}
+
+.user_info {
+    margin-bottom: 20px;
+    padding-left: 15%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid #444;
+}
+
+#user_country {
+    padding-right: 10px;
+    border-right: 1px solid #444;
+}
+
+
+.redirecionamento {
+    padding-left: 15%;
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px
+}
+
+.redirecionamento a {
+    text-decoration: none;
+}
+
+.redirecionamento a:hover {
+    color: rgba(10, 10, 10, 0.929);
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .box_logo, .box_perfil {
+        order: 0;
+    }
+
+    .box_logo {
+        margin-left: auto;
+    }
+
+    .box_buscador {
+        max-width: 100%;
+        order: 1;
+    }
+
+    .box_buscador form {
+        max-width: 100%;
+    }
+
+    #icon_config, #icon_apps {
+        display: none;
+    }
+
+    .box_menu.container {
+        flex-direction: column;
+    }
+
+    .container {
+        margin-left: auto;
+        padding: 0 10px;
+    }
+
+    .menu_list {
+        gap: 3px;
+    }
+
+    .menu_item span {
+        display: none;
+    }
+
+}
